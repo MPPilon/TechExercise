@@ -7,7 +7,7 @@ package techexercise;
 
 /**
  *
- * @author c0538434
+ * @author Matthew Pilon
  */
 public interface Population {
     //Each animal must have a growth rate

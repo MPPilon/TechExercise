@@ -7,7 +7,7 @@ package techexercise;
 
 /**
  *
- * @author c0538434
+ * @author Matthew Pilon
  */
 public interface Specifics {
     //Each animal must have a birth type and method of locomotion

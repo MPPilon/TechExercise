@@ -7,7 +7,7 @@ package techexercise;
 
 /**
  *
- * @author c0538434
+ * @author Matthew Pilon
  */
 public class TechExercise {
 

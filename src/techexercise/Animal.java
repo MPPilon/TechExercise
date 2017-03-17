@@ -100,7 +100,7 @@ public abstract class Animal implements Specifics, Population {
     
     /**
      * Calculates the population of an animal after a number of years,
-     * compounding yearly.
+     * compounding annually (Once per year).
      * @param years The number of years to calculate for
      * @return Compounded population after given number of years
      */
