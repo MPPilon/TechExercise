@@ -2,6 +2,10 @@ package techexercise;
 
 /**
  * A subclass of Animal, Mammals are warm-blooded vertebrates with hair or fur
+ * The instructions called for this class to implement the interfaces. However,
+ * I felt that the interfaces didn't capture edge cases such as the platypus
+ * or the echidna, both of which are mammals that lay eggs. The interfaces are 
+ * implemented by the Animal superclass instead.
  * @author Matthew Pilon
  */
 public class Mammal extends Animal  {
@@ -25,8 +29,8 @@ public class Mammal extends Animal  {
     }
     
     /**
-     * Constructor for the typical mammal i.e. one that gives live birth and
-     * uses its legs for locomotion
+     * Partial constructor for the typical mammal i.e. one that gives live 
+     * birth and uses its legs for locomotion
      * @param population integer describing the number of animals alive
      * @param annualGrowthRate double describing the growth rate of the population
      */
@@ -40,17 +44,18 @@ public class Mammal extends Animal  {
     
     /**
      * Full constructor for the Mammal class
-     * @param birthType String describing the type of birth
+     * @param birthType String describing the type of birth (some mammals
+     *  lay eggs instead of a live birth)
      * @param propulsionType String describing method of locomotion
-     * @param kingdom integer describing the number of animals alive
+     * @param population integer describing the number of animals alive
      * @param annualGrowthRate double describing the growth rate of the population
      */
     public Mammal(String birthType, String propulsionType, 
-            int kingdom, double annualGrowthRate) {
+            int population, double annualGrowthRate) {
         this.kingdom = "Mammal";
         this.birthType = birthType;
         this.propulsionType = propulsionType;
-        this.population = kingdom;
+        this.population = population;
         this.annualGrowthRate = annualGrowthRate;
     }
     

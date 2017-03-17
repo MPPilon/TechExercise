@@ -1,7 +1,11 @@
 package techexercise;
 
 /**
- * The superclass for all animals to be derived from
+ * The superclass for all animals to be derived from.
+ * The Specifics and Population interfaces are implemented within this class, 
+ * and most methods are implemented as getters for a respective class variable. 
+ * These variables are also given a setter method here. This was done primarily
+ * to catch edge cases like the Platypus or Emu.
  * @author Matthew Pilon
  */
 public abstract class Animal implements Specifics, Population {
@@ -83,14 +87,6 @@ public abstract class Animal implements Specifics, Population {
      */
     public void setAnnualGrowthRate(double annualGrowthRate) {
         this.annualGrowthRate = annualGrowthRate;
-    }
-    
-    /**
-     * Overload for the case that an integer is used instead of a double
-     * @param annualGrowthRate integer indicating the percentage (1 = 1%, 100 = 100%)
-     */
-    public void setAnnualGrowthRate(int annualGrowthRate) {
-        this.annualGrowthRate = annualGrowthRate/100;
     }
     
     //Class methods
