@@ -1,17 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package techexercise;
 
 /**
- *
+ * The superclass for all animals to be derived from
  * @author Matthew Pilon
  */
 public abstract class Animal implements Specifics, Population {
     //Class vars
-    protected int kingdom; //Number of animals alive (population)
+    protected String kingdom; //The type of animal (Mammal, Bird, etc.)
+    protected int population; //Number of animals alive
     //Implement Specifics interface vars
     protected String birthType, propulsionType;
     //Implement Population interface var
@@ -20,25 +16,26 @@ public abstract class Animal implements Specifics, Population {
     //Getters & Setters
 
     /**
-     * Get the kingdom population.
-     * @return The kingdom's population
+     * Get the population population.
+     * @return The population
      */
-    public int kingdom() {
+    public String getKingdom() {
         return kingdom;
     }
 
     /**
-     * Set the kingdom population.
+     * Set the population population.
      * @param kingdom The new population value
      */
-    public void setKingdom(int kingdom) {
+    public void setKingdom(String kingdom) {
         this.kingdom = kingdom;
     }
     
-    //Getters & Setters
+    //Implementation methods
     
     /**
-     * Get how the animal is born.
+     * Implementation of birthType() from the Specifics interface
+     * Returns how the animal is born.
      * @return The birth type of the animal
      */
     @Override //Implements the method from the Specifics interface
@@ -111,8 +108,8 @@ public abstract class Animal implements Specifics, Population {
         //In this case, frequency is once per year and thus 1
         double compoundedGrowthRate = Math.pow(1 + this.annualGrowthRate, years);
         
-        //Now multiply the kingdom population by the compounded growth rate.
+        //Now multiply the population population by the compounded growth rate.
         //Round to the nearest whole animal, of course.
-        return (int) Math.round((double) this.kingdom * compoundedGrowthRate);
+        return (int) Math.round((double) this.population * compoundedGrowthRate);
     }
 }
